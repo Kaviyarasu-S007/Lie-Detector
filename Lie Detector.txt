@@ -1,0 +1,42 @@
+//ARDUINO CODE
+
+const int GSR=A1;
+int sensorValue=0;
+int gsr_average=0;
+//int human_resistance=0;
+ int threshold=3;
+const int BUZZER=13;//11;
+int previous=0; 
+void setup(){
+  Serial.begin(9600);
+  pinMode(13, OUTPUT);
+}
+ 
+void loop(){
+  digitalWrite(13, HIGH);   // turn the LED on (HIGH is the voltage level)
+  delay(10);              // wait for a second
+  digitalWrite(13, LOW);    // turn the LED off by making the voltage LOW
+  delay(10);              // wait for a second
+  long sum=0;
+  for(int i=0;i<10;i++)           //Average the 10 measurements to remove the glitch
+      {
+      sensorValue=analogRead(GSR);
+      sum += sensorValue;
+      delay(5);
+      }
+   gsr_average = sum/10-275;
+   //Serial.print(" gsr_average= ");
+   Serial.println(gsr_average);
+   //int human_resistance=((1024+2*gsr_average)*10000)/(516-gsr_average);
+   //Serial.print("human resistance=");
+  // Serial.println(human_resistance);
+   delay(100);
+    if ((gsr_average - previous) > threshold){
+ 
+   digitalWrite(BUZZER,LOW);
+   Serial.println("Lie detetced");
+   
+
+ }
+ previous=gsr_average;
+}
