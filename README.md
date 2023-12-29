@@ -27,8 +27,8 @@ Follow these simple wiring instructions:
 ## Step 4: Software and Code
 
 Utilize the latest Arduino IDE version for the real-time graphing feature. Navigate to the tools menu to find the plotter. The code for the microcontroller is provided in the code section below. Copy and upload it to your board.
-![image](https://github.com/Kaviyarasu-S007/Lie-Detector/assets/151661034/90918038-81ca-4701-97b8-3697b22ccdbf)
-![image](https://github.com/Kaviyarasu-S007/Lie-Detector/assets/151661034/668dad73-6a73-4a8e-b2b4-d4ce3c0a98e1)
+![image](https://github.com/Kaviyarasu-S007/Lie-Detector/assets/151661034/db6b7e52-91ef-4445-91f6-9323505d98d4)
+![image](https://github.com/Kaviyarasu-S007/Lie-Detector/assets/151661034/11428383-016d-4e17-ae9d-ab011ea8dbe7)
 
 
 
